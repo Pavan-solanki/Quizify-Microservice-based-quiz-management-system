@@ -77,6 +77,10 @@ The frontend is built using **React + Vite** with **Axios**, providing a smooth 
                                  │
                                  ▼
                         PostgreSQL Databases
+
+
+
+##frontend View
 <img width="1887" height="891" alt="Screenshot 2025-10-20 094010" src="https://github.com/user-attachments/assets/af3671fd-a899-42cb-9fc2-5283a50c384e" />
 <img width="1881" height="902" alt="Screenshot 2025-10-20 094031" src="https://github.com/user-attachments/assets/ce946828-24b5-4f93-85bc-865e1ff5eba3" />
 <img width="1884" height="876" alt="Screenshot 2025-10-20 094112" src="https://github.com/user-attachments/assets/5a3b879e-912b-41ab-986a-c394b897b5ca" />
