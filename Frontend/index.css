@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.engagement-regular {
+    font-family: "Engagement", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
