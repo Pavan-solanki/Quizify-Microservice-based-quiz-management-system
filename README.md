@@ -5,9 +5,9 @@
 
 <h1 align="center">🎯 Quizify – Microservices-based Quiz Management System</h1>
 <p align="center">
-  <b>Spring Boot | Microservices | Spring Cloud | JPA | PostgreSQL</b>
+  <b>Spring Boot | React | Microservices | Spring Cloud | JPA | PostgreSQL | Vite</b>
   <br/>
-  A modular and distributed quiz management system built using Java & Spring Boot microservices architecture.
+  A modular and distributed full-stack quiz management system built with Java (Spring Boot Microservices) and React (Vite) frontend.
 </p>
 
 ---
@@ -16,6 +16,7 @@
 - [Overview](#-overview)
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
+- [Frontend Preview](#-frontend-preview)
 - [Microservices](#-microservices)
 - [API Endpoints](#-api-endpoints)
 - [Installation & Setup](#-installation--setup)
@@ -25,10 +26,16 @@
 ---
 
 ## 🧠 Overview
-**Quizify** is a microservices-based quiz application built with **Spring Boot** and **Spring Cloud**.  
-It consists of multiple independent services communicating via REST APIs to create, fetch, and manage quizzes dynamically.
+**Quizify** is a full-stack microservices-based **Quiz Management System** developed using **Spring Boot** for the backend and **React (Vite)** for the frontend.
 
-Each service runs independently, ensuring scalability, maintainability, and smooth deployment.
+It allows users to:
+- Create and manage quizzes.
+- Add questions dynamically.
+- Attempt quizzes and view results in real-time.
+
+Each backend service runs independently and communicates via REST APIs, ensuring scalability and maintainability.
+
+The frontend is built using **React + Vite** with **Axios**, providing a smooth and modern UI experience.
 
 ---
 
@@ -36,33 +43,41 @@ Each service runs independently, ensuring scalability, maintainability, and smoo
 
 | Layer | Technologies |
 |-------|---------------|
-| **Language** | Java 17 |
-| **Frameworks** | Spring Boot 3, Spring Cloud, Spring Data JPA |
+| **Frontend** | React, Vite, Axios, Tailwind CSS |
+| **Backend** | Spring Boot, Spring Cloud, Spring Data JPA |
 | **Microservices Tools** | Eureka Server, API Gateway, Feign Client |
 | **Database** | PostgreSQL |
-| **Testing** | Postman, JUnit |
-| **Build Tool** | Maven |
-| **IDE** | IntelliJ IDEA |
+| **Language** | Java 17 |
+| **Build Tools** | Maven, npm |
+| **Testing Tools** | Postman, JUnit |
 | **Version Control** | Git & GitHub |
+| **IDE** | IntelliJ IDEA, VS Code |
 
 ---
 
 ## 🧩 Architecture
 
 ```bash
-           ┌───────────────────────┐
-           │     API GATEWAY       │  (Port: 8080)
-           └──────────┬────────────┘
-                      │
-        ┌─────────────┴─────────────┐
-        ▼                           ▼
-┌───────────────────┐       ┌───────────────────┐
-│  QUIZ SERVICE     │       │ QUESTION SERVICE  │
-│ (Port: 8082)      │◄─────▶│ (Port: 8081)      │
-└───────────────────┘       └───────────────────┘
-                      │
-                      ▼
-              PostgreSQL Databases
-Pavan Solanki
-Full Stack Developer (Java | Spring Boot | React | DSA)
-📩 pawansk268@gmail.com
+                   ┌─────────────────────────────┐
+                   │        React Frontend       │
+                   │   (Vite + Tailwind CSS)     │
+                   └──────────────┬──────────────┘
+                                  │
+                                  ▼
+                     ┌──────────────────────────┐
+                     │       API GATEWAY        │  (Port: 8080)
+                     └───────────┬──────────────┘
+                                 │
+              ┌──────────────────┴──────────────────┐
+              ▼                                     ▼
+   ┌────────────────────┐               ┌────────────────────┐
+   │   QUIZ SERVICE     │               │ QUESTION SERVICE   │
+   │    (Port: 8082)    │◄────────────►│    (Port: 8081)    │
+   └────────────────────┘               └────────────────────┘
+                                 │
+                                 ▼
+                        PostgreSQL Databases
+<img width="1887" height="891" alt="Screenshot 2025-10-20 094010" src="https://github.com/user-attachments/assets/af3671fd-a899-42cb-9fc2-5283a50c384e" />
+<img width="1881" height="902" alt="Screenshot 2025-10-20 094031" src="https://github.com/user-attachments/assets/ce946828-24b5-4f93-85bc-865e1ff5eba3" />
+<img width="1884" height="876" alt="Screenshot 2025-10-20 094112" src="https://github.com/user-attachments/assets/5a3b879e-912b-41ab-986a-c394b897b5ca" />
+
